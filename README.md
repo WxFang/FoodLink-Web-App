@@ -12,5 +12,5 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 
 For back end, we use AWS and flask.
 
-# ![img](http://i.imgur.com/zkzt7SI.png)
-[![IMAGE ALT TEXT HERE](http://i.imgur.com/zkzt7SI.png)](https://www.youtube.com/watch?v=0MdodCUinL0)
+![img](http://i.imgur.com/zkzt7SI.png)
+[![IMAGE ALT TEXT HERE](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
