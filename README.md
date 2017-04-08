@@ -18,4 +18,4 @@ Poster:
 
 Live Video to show functionality and user case:
 
-[![IMAGE ALT TEXT HERE](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
+[![Live Video to show functionality and user case:](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
