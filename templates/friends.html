@@ -4,7 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Touch Slider-->
-     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/imageslide.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/imageslide.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/coupons.css') }}">
     <link rel="stylesheet" href="{{url_for('static',filename='lib/w3.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -20,7 +21,6 @@
 
 </head>
 <body>
-
     <div class="w3-container">
 
         <div class="top" style="height:80px">
@@ -31,8 +31,9 @@
             <!-- header -->
             <div class="header">Friends</div>
         </div>
+    </div>
 
-
+    <div class="ScrollStyle">
          <div class="w3-card-5">
             {% for f in friendlist %}
                 <div class="w3-container" id="{{f.name}}" onClick="show_profile(this.id)">
@@ -42,8 +43,9 @@
                 <hr>
             {% endfor %}
          </div>
-         <p>Friend Request</p>
          <div class="w3-card-5">
+             <div class="w3-container">Friend Request</div>
+             <br>
             {% for p in pendlist %}
                 <div class="w3-container" >
                     <img src="{{p.image}}" class="w3-left w3-circle w3-margin-right" style="width:80px">
@@ -54,6 +56,7 @@
                 <hr>
             {% endfor %}
          </div>
+    </div>
 
 
     <form id="myform"  action="{{ url_for('getFriendProfile', user_name=user_name)}}" method='POST'>
