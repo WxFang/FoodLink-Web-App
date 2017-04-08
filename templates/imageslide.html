@@ -9,49 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript">
-        var cnt={{count}}
-        function set_like(){
-            cnt--;
-            if(cnt==4){        
-                document.getElementById('pre4').value = {{prefer[4]}};
-            }
-            if(cnt==3){
-                document.getElementById('pre3').value = {{prefer[3]}};
-            }
-            if(cnt==2){
-                document.getElementById('pre2').value = {{prefer[2]}};
-            }
-            if(cnt==1){
-                document.getElementById('pre1').value = {{prefer[1]}};
-            }
-            if(cnt==0){
-                document.getElementById('pre0').value = {{prefer[0]}};
-                document.getElementById('myform').submit();
-            }
-        }
-        
-        function set_dislike(){
-            cnt--;
-            if(cnt==4){        
-                document.getElementById('pre4').value = -{{prefer[4]}};
-            }
-            if(cnt==3){
-                document.getElementById('pre3').value = -{{prefer[3]}};
-            }
-            if(cnt==2){
-                document.getElementById('pre2').value = -{{prefer[2]}};
-            }
-            if(cnt==1){
-                document.getElementById('pre1').value = -{{prefer[1]}};
-            }
-            if(cnt==0){
-                document.getElementById('pre0').value = -{{prefer[0]}};
-                document.getElementById('myform').submit();
-            }
-        }
-    </script>
+    <!-- jQuery lib -->
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    <!-- transform2d lib -->
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.transform2d.js')}}"></script>
+    <!-- jTinder lib -->
+    <script type="text/javascript" src="{{url_for('static',filename='js/jquery.jTinder.js')}}"></script>
+
 </head>
+
 <body>
 
     <!-- Top Menu -->
@@ -61,8 +27,8 @@
             <span class="menuicon" onclick="openNav()">
                 <i class="fa fa-bars"></i>
             </span>
-            <!-- header -->       
-            <div class="header">FOODLINK</div>             
+            <!-- header -->
+            <div class="header">FOODLINK</div>
         </div>
     </div>
 
@@ -70,8 +36,8 @@
     <div class="menu" id="mySidenav">
             <a href="javascript:void(0)" class="hideicon" onclick="closeNav()">
                 <i class="fa fa-remove"></i>
-            </a> 
-            <div class="text"> 
+            </a>
+            <div class="text">
                 <a href="{{url_for('givePicture', user_name=user_name)}}">Home</a>
                 <a href="{{url_for('getSelfProfile', user_name=user_name)}}">Profile</a>
                 <a href="{{url_for('getFriend',user_name=user_name)}}" >Friends</a>
@@ -79,7 +45,7 @@
                 <!--<a href="#restaurants">Restaurants</a>-->
                 <a href="#settings">Settings</a>
                 <!--<a href="#about">About</a>-->
-            </div> 
+            </div>
     </div>
 
      <!--start padding container -->
@@ -123,13 +89,102 @@
         <button class="w3-bar-item w3-button w3-center" style="font-size:36px;width:33.333%;"><i class="fa fa-gift"></i></button>
         <button class="w3-bar-item w3-button w3-center" style="font-size:36px;width:33.333%;"><i class="fa fa-child"></i></button>
     </div>
-    
+    <script type="text/javascript">
+        var cnt={{count}};
+        $("#tinderslide").jTinder({
+                animationRevertSpeed: 200,
+                animationSpeed: 400,
+                threshold: 1,
+                likeSelector: '.like',
+                dislikeSelector: '.dislike',
+                onDislike: function(item) {
+                    console.log(cnt);
+                    cnt--;
+                    if(cnt==4){
+                        document.getElementById('pre4').value = -{{prefer[4]}};
+                    }
+                    if(cnt==3){
+                        document.getElementById('pre3').value = -{{prefer[3]}};
+                    }
+                    if(cnt==2){
+                        document.getElementById('pre2').value = -{{prefer[2]}};
+                    }
+                    if(cnt==1){
+                        document.getElementById('pre1').value = -{{prefer[1]}};
+                    }
+                    if(cnt==0){
+                        document.getElementById('pre0').value = -{{prefer[0]}};
+                        document.getElementById('myform').submit();
+                    }
+                },
+                onLike: function() {
+                    console.log(cnt);
+                    cnt--;
+                    if(cnt==4){
+                        document.getElementById('pre4').value = {{prefer[4]}};
+                    }
+                    if(cnt==3){
+                        document.getElementById('pre3').value = {{prefer[3]}};
+                    }
+                    if(cnt==2){
+                        document.getElementById('pre2').value = {{prefer[2]}};
+                    }
+                    if(cnt==1){
+                        document.getElementById('pre1').value = {{prefer[1]}};
+                    }
+                    if(cnt==0){
+                        document.getElementById('pre0').value = {{prefer[0]}};
+                        document.getElementById('myform').submit();
+                    }
+                }
+        });
+        function set_like(){
+            cnt--;
+            if(cnt==4){
+                document.getElementById('pre4').value = {{prefer[4]}};
+            }
+            if(cnt==3){
+                document.getElementById('pre3').value = {{prefer[3]}};
+            }
+            if(cnt==2){
+                document.getElementById('pre2').value = {{prefer[2]}};
+            }
+            if(cnt==1){
+                document.getElementById('pre1').value = {{prefer[1]}};
+            }
+            if(cnt==0){
+                document.getElementById('pre0').value = {{prefer[0]}};
+                document.getElementById('myform').submit();
+            }
+        }
+
+        function set_dislike(){
+            cnt--;
+            if(cnt==4){
+                document.getElementById('pre4').value = -{{prefer[4]}};
+            }
+            if(cnt==3){
+                document.getElementById('pre3').value = -{{prefer[3]}};
+            }
+            if(cnt==2){
+                document.getElementById('pre2').value = -{{prefer[2]}};
+            }
+            if(cnt==1){
+                document.getElementById('pre1').value = -{{prefer[1]}};
+            }
+            if(cnt==0){
+                document.getElementById('pre0').value = -{{prefer[0]}};
+                document.getElementById('myform').submit();
+            }
+        }
+    </script>
+
     <!-- Like&Dislike Button -->
     <div class="actions">
         <a href="#" class="dislike" onclick='set_dislike()' ><i></i></a>
         <a href="#" class="like" onclick='set_like()'><i></i></a>
-    </div>  
-   
+    </div>
+
    <form  id="myform"  action="{{ url_for('update_preference', user_name=user_name)}}" method='POST'>
         <input type="hidden" id="pre0" name="pre0" value={{prefer[0]}}/>
         <input type="hidden" id="pre1" name="pre1" value={{prefer[1]}}/>
@@ -138,8 +193,6 @@
         <input type="hidden" id="pre4" name="pre4" value={{prefer[4]}}/>
    </form>
 
-      
-    
     <!-- jTinder status text  -->
     <div id="status"></div>
 
