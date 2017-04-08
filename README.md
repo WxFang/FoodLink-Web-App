@@ -12,11 +12,11 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 
 For back end, we use AWS and flask.
 
-**Poster:** # H2
+# H2 **Poster:** 
 
 ![img](http://i.imgur.com/zkzt7SI.png)
 
 ----------------------------------------------------------
-**Live Video to show functionality and user case:** # H2
+# H2 **Live Video to show functionality and user case:** 
 
 [![Live Video to show functionality and user case:](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
