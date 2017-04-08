@@ -12,6 +12,4 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 
 For back end, we use AWS and flask.
 
-<br>
-<img src="https://github.com/WxFang/FoodLink/tree/master/Presentation/Poster.PNG \">
-<br>
+![img](http://i.imgur.com/zkzt7SI.png)
