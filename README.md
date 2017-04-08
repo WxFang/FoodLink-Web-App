@@ -13,7 +13,7 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 For back end, we use AWS and flask.
 
 # **Poster:** 
-- ![Poser](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+# <p style='color:red'>Poster</p>
 ![img](http://i.imgur.com/zkzt7SI.png)
 
 ----------------------------------------------------------
