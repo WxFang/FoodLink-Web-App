@@ -14,10 +14,8 @@ For back end, we use AWS and flask.
 
 # **<p style="color:red">Poster</p>**
 ![img](http://i.imgur.com/zkzt7SI.png)
-
-//
-//
-
+<br />
+<br />
 # **<p style="color:red">Live Video to show functionality and user case:</p>**
 
 [![Live Video to show functionality and user case:](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
