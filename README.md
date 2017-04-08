@@ -12,10 +12,12 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 
 For back end, we use AWS and flask.
 
-# **<p style="color:red">Poster</p>**
+# [Click here to connect to FoodLink Web App](http://foodlink.frcufs3a4e.us-east-1.elasticbeanstalk.com/)
+
+## **<p style="color:red">Poster</p>**
 ![img](http://i.imgur.com/zkzt7SI.png)
 <br />
 <br />
-# **<p style="color:red">Live Video to show functionality and user case:</p>**
+## **<p style="color:red">Live Video to show functionality and user case:</p>**
 
 [![Live Video to show functionality and user case:](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
