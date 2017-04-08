@@ -12,11 +12,11 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 
 For back end, we use AWS and flask.
 
-# ```diff - **Poster:** ```
-
+# **Poster:** 
+- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
 ![img](http://i.imgur.com/zkzt7SI.png)
 
 ----------------------------------------------------------
-# ```diff - **Live Video ```to show functionality and user case:**
+# **Live Video to show functionality and user case:**
 
 [![Live Video to show functionality and user case:](http://i.imgur.com/EgXkOXo.jpg)](https://www.youtube.com/watch?v=0MdodCUinL0)
