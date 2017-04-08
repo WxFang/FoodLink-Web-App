@@ -12,8 +12,7 @@ For front end, we use [jTinder](https://github.com/do-web/jTinder), bootstrap an
 
 For back end, we use AWS and flask.
 
-# **Poster:** 
-# <p style='color:red'>Poster</p>
+# **<p style="color:red">Poster</p>**
 ![img](http://i.imgur.com/zkzt7SI.png)
 
 ----------------------------------------------------------
